@@ -9,7 +9,7 @@ All image-processing algorithms (grayscale, blur, rotation, etc.) are implemente
 
 | Original Image Loaded | Grayscale Filter Applied |
 | :---: | :---: |
-| ![Original Image](./2.png) | ![Grayscale Filter](./3.png) |
+| ![Original Image](./screenshot/lena.png) | ![Grayscale Filter](./screenshot/grayscale.png) |
 
 ## Features
 
