@@ -48,7 +48,7 @@ Callbacks in `gui.c` only invoke the corresponding `apply_*()` function — the 
 
 Only **24-bit uncompressed BMP** is supported, per the assignment spec. Opening a file with a different bit depth, compression, or an invalid signature will show an error message rather than crash.
 
-## Known Limitations
+## Limitations
 
 - Only one level of undo (no redo/undo history stack)
 - Only BMP is supported — no PNG/JPEG/GIF
