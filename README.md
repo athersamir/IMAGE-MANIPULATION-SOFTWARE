@@ -5,6 +5,12 @@ A simple graphical image editor written in C using the IUPtoolkit for the GUI. B
 
 All image-processing algorithms (grayscale, blur, rotation, etc.) are implemented from scratch on raw pixel data; no external library is used to perform the manipulations themselves.
 
+## Screenshots
+
+| Original Image Loaded | Grayscale Filter Applied |
+| :---: | :---: |
+| ![Original Image](./2.png) | ![Grayscale Filter](./3.png) |
+
 ## Features
 
 - **Open** — load a 24-bit uncompressed BMP image via a file dialog
