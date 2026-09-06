@@ -78,11 +78,6 @@ image_editor.exe
 
 ### **macOS**
 
-The IUP library is bundled as a zip file, so unzip it first — this creates an `iup_mac/iup` folder:
-```bash
-unzip iup_mac/iup.zip -d iup_mac
-```
-
 In case macOS blocks the bundled library from running, remove the quarantine flag:
 ```bash
 xattr -dr com.apple.quarantine iup_mac
