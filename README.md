@@ -76,6 +76,28 @@ gcc code/*.c -o image_editor.exe -std=c17 -Wall -Wextra -mwindows -Iiup_windows/
 image_editor.exe
 ```
 
+### macOS
+
+In case macOS blocks the bundled library from running, remove the quarantine flag first:
+```bash
+xattr -dr com.apple.quarantine iup_mac
+```
+
+**1. Compile and link:**
+```bash
+gcc code/*.c -o image_editor -std=c17 -Wall -Wextra -Iiup_mac/include iup_mac/lib/Mac/libiup.dylib
+```
+
+**2. Fix the library path:**
+```bash
+install_name_tool -change libiup.dylib @executable_path/iup_mac/lib/Mac/libiup.dylib image_editor
+```
+
+**3. Run the program:**
+```bash
+./image_editor
+```
+
 ## Usage
 
 1. Run the compiled executable.
