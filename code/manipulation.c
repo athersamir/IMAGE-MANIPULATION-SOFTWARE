@@ -227,7 +227,7 @@
 
     void apply_blur() {
         if (current_image == NULL) {
-            printf("Error: No image loaded!\n");
+            IupMessage("Error", "Please open an image first.");
             return;
         }
 
