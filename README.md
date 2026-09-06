@@ -52,7 +52,7 @@ Once IUP is installed, compile and run using the commands below for your OS.
 
 ```bash
 # 1. Compile and link
-gcc gui.c manipulation.c display.c -o image_editor -liup
+gcc code/*.c -o image_editor -std=c17 -Wall -Wextra -Iiup_linux/iup/include -Liup_linux/iup -liup -lX11 -lXpm -lXext -lm -ldl
 
 # 2. Run the program
 ./image_editor
