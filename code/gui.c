@@ -4,57 +4,68 @@
 #include "allheaderfile.h"
 
     int btn_open_cb(Ihandle *self) {
+        (void)self;
         bmp_open();
         return IUP_DEFAULT;
     }
 
     int btn_save_cb(Ihandle *self) {
+        (void)self;
         apply_save();
         return IUP_DEFAULT;
     }
 
     int btn_undo_cb(Ihandle *self) {
+        (void)self;
         apply_undo();
         return IUP_DEFAULT;
     }
 
 
     int btn_grayscale_cb(Ihandle *self) {
+        (void)self;
         apply_grayscale(); 
         return IUP_DEFAULT;
     }
 
     int btn_brightness_cb(Ihandle *self) {
+        (void)self;
         apply_brightness();
         return IUP_DEFAULT;
     }
 
     int btn_invert_cb(Ihandle *self) {
+        (void)self;
         apply_inversion(); 
         return IUP_DEFAULT;
     }
 
     int btn_hflip_cb(Ihandle *self) {
+        (void)self;
         apply_hflip();
         return IUP_DEFAULT;
     }
 
     int btn_vflip_cb(Ihandle *self) {
+        (void)self;
         apply_vflip();
         return IUP_DEFAULT;
     }
 
     int btn_rotate_cb(Ihandle *self) {
+        (void)self;
         apply_rotate90();
         return IUP_DEFAULT;
     }
 
     int btn_crop_cb(Ihandle *self) {
+        (void)self;
         apply_crop();
         return IUP_DEFAULT;
     }
 
     int btn_blur_cb(Ihandle *self) {
+        (void)self;
         apply_blur();
         return IUP_DEFAULT;
     }
