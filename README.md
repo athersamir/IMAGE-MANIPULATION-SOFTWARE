@@ -46,7 +46,7 @@ Callbacks in `gui.c` only invoke the corresponding `apply_*()` function — the 
 
 Just copy the command for your OS and compile the code.
 
-### Linux
+### **Linux**
 
 In case `libXpm` is not already installed on your system, install it first:
 ```bash
@@ -64,7 +64,7 @@ gcc code/*.c -o image_editor -std=c17 -Wall -Wextra -Iiup_linux/iup/include -Liu
 ./image_editor
 ```
 
-### Windows
+### **Windows**
 
 **1. Compile and link:**
 ```bat
@@ -76,7 +76,7 @@ gcc code/*.c -o image_editor.exe -std=c17 -Wall -Wextra -mwindows -Iiup_windows/
 image_editor.exe
 ```
 
-### macOS
+### **macOS**
 
 In case macOS blocks the bundled library from running, remove the quarantine flag first:
 ```bash
