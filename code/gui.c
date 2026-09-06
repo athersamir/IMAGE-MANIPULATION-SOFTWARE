@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <iup.h>
 #include "allheaderfile.h"
 
     int btn_open_cb(Ihandle *self) {
