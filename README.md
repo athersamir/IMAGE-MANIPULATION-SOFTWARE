@@ -44,7 +44,15 @@ Callbacks in `gui.c` only invoke the corresponding `apply_*()` function — the 
 
 ## How to Compile and Run
 
+Just copy the command for your OS and compile the code.
+
 ### Linux
+
+In case `libXpm` is not already installed on your system, install it first:
+```bash
+sudo apt update
+sudo apt install libxpm-dev
+```
 
 **1. Compile and link:**
 ```bash
