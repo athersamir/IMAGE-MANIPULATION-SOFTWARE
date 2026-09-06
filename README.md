@@ -78,19 +78,24 @@ image_editor.exe
 
 ### **macOS**
 
-In case macOS blocks the bundled library from running, remove the quarantine flag first:
+The IUP library is bundled as a zip file, so unzip it first — this creates an `iup_mac/iup` folder:
+```bash
+unzip iup_mac/iup.zip -d iup_mac
+```
+
+In case macOS blocks the bundled library from running, remove the quarantine flag:
 ```bash
 xattr -dr com.apple.quarantine iup_mac
 ```
 
 **1. Compile and link:**
 ```bash
-gcc code/*.c -o image_editor -std=c17 -Wall -Wextra -Iiup_mac/include iup_mac/lib/Mac/libiup.dylib
+gcc code/*.c -o image_editor -std=c17 -Wall -Wextra -Iiup_mac/iup/include iup_mac/iup/lib/Mac/libiup.dylib
 ```
 
 **2. Fix the library path:**
 ```bash
-install_name_tool -change libiup.dylib @executable_path/iup_mac/lib/Mac/libiup.dylib image_editor
+install_name_tool -change libiup.dylib @executable_path/iup_mac/iup/lib/Mac/libiup.dylib image_editor
 ```
 
 **3. Run the program:**
