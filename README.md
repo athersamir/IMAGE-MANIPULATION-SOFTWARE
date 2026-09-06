@@ -44,27 +44,27 @@ Callbacks in `gui.c` only invoke the corresponding `apply_*()` function — the 
 
 ## How to Compile and Run
 
-Before compiling, make sure the **IUP toolkit** is downloaded and installed on your system — you'll need its header files and library files available to your compiler. Get it from the official site: https://www.tecgraf.puc-rio.br/iup/
-
-Once IUP is installed, compile and run using the commands below for your OS.
-
 ### Linux
 
+**1. Compile and link:**
 ```bash
-# 1. Compile and link
-gcc code/*.c -o image_editor -std=c17 -Wall -Wextra -Iiup_linux/iup/include -Liup_linux/iup -liup -lX11 -lXpm -lXext -lm -ldl
+gcc code/*.c -o image_editor -std=c17 -Wall -Wextra -Iiup_linux/iup/include -Liup_linux/iup -Wl,-rpath,./iup_linux/iup -liup -lX11 -lXpm -lXext -lm -ldl
+```
 
-# 2. Run the program
+**2. Run the program:**
+```bash
 ./image_editor
 ```
 
 ### Windows
 
+**1. Compile and link:**
 ```bat
-:: 1. Compile and link
 gcc code/*.c -o image_editor.exe -std=c17 -Wall -Wextra -mwindows -Iiup_windows/iup/include -Liup_windows/iup -liup -lgdi32 -lcomdlg32 -lcomctl32 -luuid -loleaut32 -lole32
+```
 
-:: 2. Run the program
+**2. Run the program:**
+```bat
 image_editor.exe
 ```
 
