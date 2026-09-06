@@ -62,7 +62,7 @@ gcc gui.c manipulation.c display.c -o image_editor -liup
 
 ```bat
 :: 1. Compile and link
-gcc gui.c manipulation.c display.c -o image_editor.exe -liup -lgdi32 -lcomdlg32 -lcomctl32 -luuid -lole32
+gcc code/*.c -o image_editor.exe -std=c17 -Wall -Wextra -mwindows -Iiup_windows/iup/include -Liup_windows/iup -liup -lgdi32 -lcomdlg32 -lcomctl32 -luuid -loleaut32 -lole32
 
 :: 2. Run the program
 image_editor.exe
