@@ -42,6 +42,32 @@ Callbacks in `gui.c` only invoke the corresponding `apply_*()` function — the 
 - A C compiler (GCC, MinGW, or MSVC)
 - The [IUP toolkit] development package (headers + libraries) for your OS
 
+## How to Compile and Run
+
+Before compiling, make sure the **IUP toolkit** is downloaded and installed on your system — you'll need its header files and library files available to your compiler. Get it from the official site: https://www.tecgraf.puc-rio.br/iup/
+
+Once IUP is installed, compile and run using the commands below for your OS.
+
+### Linux
+
+```bash
+# 1. Compile and link
+gcc gui.c manipulation.c display.c -o image_editor -liup
+
+# 2. Run the program
+./image_editor
+```
+
+### Windows
+
+```bat
+:: 1. Compile and link
+gcc gui.c manipulation.c display.c -o image_editor.exe -liup -lgdi32 -lcomdlg32 -lcomctl32 -luuid -lole32
+
+:: 2. Run the program
+image_editor.exe
+```
+
 ## Usage
 
 1. Run the compiled executable.
